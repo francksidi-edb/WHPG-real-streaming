@@ -2,9 +2,8 @@
 
 A complete demonstration of **FlowServer** real-time data streaming capabilities, featuring dual-stream processing (E-Commerce + IoT) with live dashboards and advanced transformations.
 
-![Demo Architecture](docs/architecture.png)
 
-## 🎯 What This Demo Shows
+## What This Demo Shows
 
 - **Multi-Format Streaming**: Simultaneous processing of JSON and CSV data streams
 - **Real-Time Transformations**: 9+ data enrichments applied in-flight
@@ -12,7 +11,7 @@ A complete demonstration of **FlowServer** real-time data streaming capabilities
 - **Live Dashboards**: Real-time visualization with 2-second refresh cycles
 - **Production Performance**: 70+ messages/second with sub-second latency
 
-## 📊 Demo Components
+## Demo Components
 
 ### E-Commerce Stream
 - **Source**: Kafka topic `ecommerce-orders` (JSON format)
@@ -26,7 +25,7 @@ A complete demonstration of **FlowServer** real-time data streaming capabilities
 - **Transformations**: Building/floor extraction, temperature conversion (C→F), comfort index, alert levels, data quality validation
 - **Dashboard**: Multi-building sensor monitoring, alert tracking, environmental metrics
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -40,7 +39,7 @@ A complete demonstration of **FlowServer** real-time data streaming capabilities
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourorg/flowserver-demo.git
+git clone https://github.com/francksidi-edb/WHPG-real-streaming.git
 cd flowserver-demo
 ```
 
@@ -86,7 +85,7 @@ flowcli job submit jobs/iot-sensors-csv.yaml
 - E-Commerce: http://localhost:8666/ecommerce-dashboard.html
 - IoT Sensors: http://localhost:8668/iot.html
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 flowserver-demo/
@@ -116,7 +115,7 @@ flowserver-demo/
     └── TRANSFORMATIONS.md
 ```
 
-## 🎮 Demo Control Scripts
+## Demo Control Scripts
 
 ### Start Full Demo
 ```bash
@@ -144,7 +143,7 @@ Examples:
 ./scripts/status-demo.sh
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Kafka Brokers
 Update broker addresses in:
@@ -160,7 +159,7 @@ Update database settings in:
 - `dashboards/ecommerce-api.py` (lines 8-12)
 - `dashboards/iot-api.py` (lines 8-12)
 
-## 📈 Key Transformations
+## Key Transformations
 
 ### E-Commerce: Revenue Bucket
 ```sql
@@ -185,14 +184,14 @@ END
 
 See [TRANSFORMATIONS.md](docs/TRANSFORMATIONS.md) for complete details.
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 - **Throughput**: 70+ messages/second (dual streams)
 - **Latency**: < 1 second end-to-end (Kafka → Database)
 - **Error Rate**: 0% (zero rejections)
 - **Uptime**: Continuous operation (tested 24+ hours)
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Generators not connecting to Kafka
 ```bash
