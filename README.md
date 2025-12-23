@@ -9,19 +9,17 @@ A complete demonstration of **FlowServer** real-time data streaming capabilities
 - **Real-Time Transformations**: 9+ data enrichments applied in-flight
 - **Zero-Error Processing**: 100% data accuracy at high throughput
 - **Live Dashboards**: Real-time visualization with 2-second refresh cycles
-- **Production Performance**: 70+ messages/second with sub-second latency
+- **Production Performance**: 10000+ messages/second with sub-second latency
 
 ## Demo Components
 
 ### E-Commerce Stream
 - **Source**: Kafka topic `ecommerce-orders` (JSON format)
-- **Processing Rate**: 50 orders/second
 - **Transformations**: Revenue bucket classification, bulk order detection
 - **Dashboard**: Real-time revenue tracking, customer segmentation, geographic distribution
 
 ### IoT Sensor Stream
 - **Source**: Kafka topic `iot-sensors-csv` (CSV format)
-- **Processing Rate**: 20 readings/second
 - **Transformations**: Building/floor extraction, temperature conversion (C→F), comfort index, alert levels, data quality validation
 - **Dashboard**: Multi-building sensor monitoring, alert tracking, environmental metrics
 
@@ -129,7 +127,7 @@ Options:
 
 Examples:
   ./scripts/start-demo.sh                          # Start with defaults
-  ./scripts/start-demo.sh --ecom-rate 100          # Faster e-commerce stream
+  ./scripts/start-demo.sh --ecom-rate 10000          # Faster e-commerce stream
   ./scripts/start-demo.sh --ecom-total 10000       # Generate 10K orders then stop
 ```
 
