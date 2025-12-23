@@ -181,8 +181,42 @@ CASE
   ELSE 'uncomfortable'
 END
 ```
-
+---
 See [TRANSFORMATIONS.md](docs/TRANSFORMATIONS.md) for complete details.
+
+## QUICK DASHBOARD ACCESS
+
+After running `./scripts/start-demo.sh`, open these URLs in your browser:
+
+### Local Access (on the server):
+```
+http://localhost:8666/ecommerce-dashboard.html
+http://localhost:8668/iot.html
+```
+
+### Remote Access (from your laptop):
+Replace localhost with server IP/hostname:
+```
+http://YOUR_SERVER_IP:8666/ecommerce-dashboard.html
+http://YOUR_SERVER_IP:8668/iot.html
+```
+
+### Find Your Server IP:
+```bash
+hostname -I | awk '{print $1}'
+```
+
+### Verify Everything Works:
+```bash
+./scripts/status-demo.sh
+```
+
+### If Dashboard Shows "Loading...":
+1. Open browser console (F12) - check for errors
+2. Test API: `curl http://localhost:5000/api/health`
+3. Check data: `psql -h localhost -U gpadmin -d albaraka -c "SELECT COUNT(*) FROM ecommerce_orders;"`
+
+
 
 ## Performance Metrics
 
