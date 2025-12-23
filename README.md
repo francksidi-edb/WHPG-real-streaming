@@ -272,6 +272,4 @@ Contributions welcome! Please open an issue or submit a pull request.
 For questions or support, please open an issue on GitHub.
 
 ---
-
 **Built with**: FlowServer • WarehousePG • Kafka • Python • Go
-# WHPG-real-streaming
