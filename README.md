@@ -237,13 +237,9 @@ kafka-topics --list --bootstrap-server localhost:9092
 ### FlowServer jobs failing
 ```bash
 # Check job status
-flowcli status ecommerce-orders
-flowcli status iot-sensors-csv
+flowcli list ecommerce-orders
+flowcli list iot-sensors-csv
 
-# View job logs
-flowcli logs ecommerce-orders
-flowcli logs iot-sensors-csv
-```
 
 ### Dashboards not loading data
 ```bash
